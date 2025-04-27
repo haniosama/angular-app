@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,15 +12,17 @@ import { RouterLink } from '@angular/router';
 export class HeaderComponent implements OnInit {
   isMenuOpen: boolean = false;
   userName: string = '';
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     const loggedInUser = localStorage.getItem('loggedInUser');
+    console.log(loggedInUser);
     if (loggedInUser) {
       try {
         const user = JSON.parse(loggedInUser);
+        console.log(user.name);
         if (user && user.name) {
           this.userName = user.name;
-          console.log(`Logged in user: ${user.name}`);
         }
       } catch (error) {
         console.error('Error parsing loggedInUser from localStorage:', error);
@@ -29,6 +31,7 @@ export class HeaderComponent implements OnInit {
   }
 
   isUserLoggedIn(): boolean {
+    console.log(this.userName);
     return !!this.userName;
   }
 
@@ -36,5 +39,6 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('loggedInUser');
     this.userName = '';
     console.log('User logged out');
+    this.router.navigate(['/']);
   }
 }

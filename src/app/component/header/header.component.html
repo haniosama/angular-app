@@ -45,6 +45,17 @@
         Welcome, {{ userName | titlecase }}
       </span>
       <a
+        *ngIf="userName"
+        (click)="logout()"
+        class="flex justify-center border border-cyan-800 rounded-sm px-3 py-1 hover:bg-cyan-900 hover:text-white transition"
+        >logout</a
+      >
+    </div>
+    <div
+      *ngIf="!isUserLoggedIn()"
+      class="w-full md:w-auto flex flex-col md:flex-row items-center gap-2 mt-4 md:mt-0 z-100 md:block md:flex"
+    >
+      <a
         *ngIf="!userName"
         [routerLink]="['/register']"
         class="flex justify-center border border-cyan-800 rounded-sm px-3 py-1 bg-cyan-900 text-white hover:bg-white hover:text-black transition"
@@ -55,13 +66,6 @@
         [routerLink]="['/login']"
         class="flex justify-center border border-cyan-800 rounded-sm px-3 py-1 hover:bg-cyan-900 hover:text-white transition"
         >login</a
-      >
-      <a
-        *ngIf="userName"
-        (click)="logout()"
-        [routerLink]="['/register']"
-        class="flex justify-center border border-cyan-800 rounded-sm px-3 py-1 hover:bg-cyan-900 hover:text-white transition"
-        >logout</a
       >
     </div>
   </nav>
