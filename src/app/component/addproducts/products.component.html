@@ -1,0 +1,154 @@
+<div
+  class="min-h-screen flex items-center justify-center bg-gray-100 px-4 relative z-100"
+>
+  <button
+    [routerLink]="['/home']"
+    class="absolute top-5 left-10 md:left-30 sm:left-20 hover:underline font-semibold px-3 py-1 flex justify-center items-center rounded-md"
+  >
+    ReturnBack
+  </button>
+  <div
+    class="bg-violet-800 w-50 h-50 rounded-full absolute top-8 left-5 z-[-1] blur-md md:left-50 lg:left-100"
+  ></div>
+  <div
+    class="bg-blue-800 w-50 h-50 rounded-full absolute bottom-8 right-5 z-[-1] blur-md md:right-50 lg:right-100"
+  ></div>
+  <div class="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+      Add Product
+    </h2>
+    <form
+      action=""
+      class="space-y-6"
+      [formGroup]="addProduct"
+      (ngSubmit)="addProducts()"
+    >
+      <div>
+        <label for="" class="bloc text-sm font-medium text-gray-700 mb-1"
+          >Product Name</label
+        >
+        <input
+          type="text"
+          name=""
+          id=""
+          formControlName="productName"
+          placeholder="Enter product name"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-blue-500"
+        />
+        <div
+          *ngIf="
+            !addProduct.controls['productName'].valid &&
+            addProduct.controls['productName'].touched
+          "
+        >
+          <p class="text-red-500 text-sm">Name is invalid</p>
+        </div>
+        <div
+          *ngIf="
+            addProduct.controls['productName'].valid &&
+            addProduct.controls['productName'].touched
+          "
+        >
+          <p class="text-green-500 text-sm">Name is valid</p>
+        </div>
+      </div>
+      <div>
+        <label for="" class="bloc text-sm font-medium text-gray-700 mb-1"
+          >Description</label
+        >
+        <input
+          type="text"
+          name=""
+          id=""
+          formControlName="Description"
+          placeholder="Enter Description Product "
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-blue-500"
+        />
+        <div
+          *ngIf="
+            !addProduct.controls['Description'].valid &&
+            addProduct.controls['Description'].touched
+          "
+        >
+          <p class="text-red-500 text-sm">Description is invalid</p>
+        </div>
+        <div
+          *ngIf="
+            addProduct.controls['Description'].valid &&
+            addProduct.controls['Description'].touched
+          "
+        >
+          <p class="text-green-500 text-sm">Description is valid</p>
+        </div>
+      </div>
+      <div>
+        <label for="" class="bloc text-sm font-medium text-gray-700 mb-1"
+          >Image URL</label
+        >
+        <input
+          type="text"
+          name=""
+          id=""
+          formControlName="imageUrl"
+          placeholder="Enter Image Url"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-blue-500"
+        />
+        <div
+          *ngIf="
+            !addProduct.controls['imageUrl'].valid &&
+            addProduct.controls['imageUrl'].touched
+          "
+        >
+          <p class="text-red-500 text-sm">Url is invalid</p>
+        </div>
+        <div
+          *ngIf="
+            addProduct.controls['imageUrl'].valid &&
+            addProduct.controls['imageUrl'].touched
+          "
+        >
+          <p class="text-green-500 text-sm">Url is valid</p>
+        </div>
+      </div>
+      <div>
+        <label for="" class="bloc text-sm font-medium text-gray-700 mb-1"
+          >Rate</label
+        >
+        <input
+          type="text"
+          name=""
+          id=""
+          formControlName="productRate"
+          placeholder="Enter Product Rate"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-blue-500"
+        />
+        <div
+          *ngIf="
+            !addProduct.controls['productRate'].valid &&
+            addProduct.controls['productRate'].touched
+          "
+        >
+          <p class="text-red-500 text-sm">rate is invalid</p>
+        </div>
+        <div
+          *ngIf="
+            addProduct.controls['productRate'].valid &&
+            addProduct.controls['productRate'].touched
+          "
+        >
+          <p class="text-green-500 text-sm">rate is valid</p>
+        </div>
+      </div>
+      <div>
+        <button
+          [disabled]="addProduct.invalid"
+          type="submit"
+          class="w-full bg-blue-600 text-white hover:bg-blue-700 rounded-lg py-2 transition duration-300 font-semibold disabled:cursor-not-allowed"
+        >
+          Add Product
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<app-footer />

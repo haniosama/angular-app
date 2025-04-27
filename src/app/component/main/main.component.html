@@ -1,0 +1,201 @@
+<div class="relative w-full h-screen">
+  <!-- Image Slider -->
+  <div class="w-full h-full overflow-hidden">
+    <img
+      [src]="image[counter]"
+      alt="slider image"
+      class="w-full h-full object-cover"
+    />
+  </div>
+
+  <button
+    (click)="PreImage()"
+    class="absolute top-1/2 left-6 transform -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-90 p-3 rounded-full shadow-lg transition"
+  >
+    <img src="image/left-arrow.png" alt="Previous" width="24" />
+  </button>
+
+  <button
+    (click)="nextImage()"
+    class="absolute top-1/2 right-6 transform -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-90 p-3 rounded-full shadow-lg transition"
+  >
+    <img src="image/right-arrow.png" alt="Next" width="24" />
+  </button>
+</div>
+
+<h1 class="text-3xl mx-auto max-w-screen-xl px-6 py-3 font-bold">
+  Related Courses
+</h1>
+<div
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mx-auto max-w-screen-xl"
+>
+  <div
+    class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition"
+  >
+    <img
+      src="image/js.png"
+      alt="JavaScript Logo"
+      class="w-full h-48 object-cover hover:scale-110 transition-all"
+    />
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">JavaScript</h2>
+      <p class="text-gray-600 mb-4">
+        JavaScript is a versatile language for web development used to create
+        interactive experiences.
+      </p>
+      <button
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+      >
+        Learn More
+      </button>
+    </div>
+  </div>
+  <div
+    class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition"
+  >
+    <img
+      src="image/js.png"
+      alt="JavaScript Logo"
+      class="w-full h-48 object-cover hover:scale-110 transition-all"
+    />
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">JavaScript</h2>
+      <p class="text-gray-600 mb-4">
+        JavaScript is a versatile language for web development used to create
+        interactive experiences.
+      </p>
+      <button
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+      >
+        Learn More
+      </button>
+    </div>
+  </div>
+  <!-- Angular Card -->
+  <div
+    class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition"
+  >
+    <img
+      src="image/angular.jpg"
+      alt="Angular Logo"
+      class="w-full h-48 object-cover hover:scale-110 transition-all"
+    />
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">Angular</h2>
+      <p class="text-gray-600 mb-4">
+        Angular is a powerful front-end framework developed by Google for
+        building modern web apps.
+      </p>
+      <button
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+      >
+        Learn More
+      </button>
+    </div>
+  </div>
+  <div
+    class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition"
+  >
+    <img
+      src="image/angular.jpg"
+      alt="Angular Logo"
+      class="w-full h-48 object-cover hover:scale-110 transition-all"
+    />
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">Angular</h2>
+      <p class="text-gray-600 mb-4">
+        Angular is a powerful front-end framework developed by Google for
+        building modern web apps.
+      </p>
+      <button
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+      >
+        Learn More
+      </button>
+    </div>
+  </div>
+  <div
+    class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition"
+  >
+    <img
+      src="image/images.jpg"
+      alt="HTML5 Logo"
+      class="w-full h-48 object-cover hover:scale-110 transition-all"
+    />
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">HTML5</h2>
+      <p class="text-gray-600 mb-4">
+        HTML5 is the standard language for building the structure of websites
+        and applications.
+      </p>
+      <button
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+      >
+        Learn More
+      </button>
+    </div>
+  </div>
+  <div
+    class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition"
+  >
+    <img
+      src="image/images.jpg"
+      alt="HTML5 Logo"
+      class="w-full h-48 object-cover hover:scale-110 transition-all"
+    />
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">HTML5</h2>
+      <p class="text-gray-600 mb-4">
+        HTML5 is the standard language for building the structure of websites
+        and applications.
+      </p>
+      <button
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+      >
+        Learn More
+      </button>
+    </div>
+  </div>
+  <div
+    class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition"
+  >
+    <img
+      src="image/react.png"
+      alt="React Logo"
+      class="w-full h-48 object-cover hover:scale-110 transition-all"
+    />
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">React</h2>
+      <p class="text-gray-600 mb-4">
+        React is a popular JavaScript library for building user interfaces
+        efficiently with components.
+      </p>
+      <button
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+      >
+        Learn More
+      </button>
+    </div>
+  </div>
+  <div
+    class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition"
+  >
+    <img
+      src="image/react.png"
+      alt="React Logo"
+      class="w-full h-48 object-cover hover:scale-110 transition-all"
+    />
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">React</h2>
+      <p class="text-gray-600 mb-4">
+        React is a popular JavaScript library for building user interfaces
+        efficiently with components.
+      </p>
+      <button
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+      >
+        Learn More
+      </button>
+    </div>
+  </div>
+</div>
