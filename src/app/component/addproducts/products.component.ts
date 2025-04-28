@@ -34,7 +34,7 @@ export class ProductsComponent implements OnInit {
       imageUrl: new FormControl('', [
         Validators.required,
         Validators.pattern(
-          /^(https?:\/\/|\.\/|\.\.\/)?[\w\-\/:%]+?\.(jpg|jpeg|png|webp)(\?.*)?$/i
+          /^(https?:\/\/|\.\/|\.\.\/)?[\w\-\/\.:%]+?\.(jpg|jpeg|png|webp)(\?.*)?$/i
         ),
       ]),
       productRate: new FormControl('', [Validators.required]),
